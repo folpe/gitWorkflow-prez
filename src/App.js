@@ -1,9 +1,11 @@
 import { Box, Deck,  FlexBox,  FullScreen,  Progress } from 'spectacle'
 import './App.css'
+import Accueil from './components/Accueil';
 import Avantages from './components/Avantages';
 import Bonus from './components/Bonus';
 import Branches from './components/Branches';
 import Presentation from './components/Presentation'
+import Questions from './components/Questions';
 import VieBranche from './components/VieBranche';
 import Workflow from './components/Workflow';
 
@@ -23,23 +25,24 @@ const theme = {
   },
 }
 
-const transition = {
-  from: {
-    opacity: 0,
-    transform: 'rotate(45deg)'
-  },
-  enter: {
-    opacity: 1,
-    transform: 'rotate(0)'
-  },
-  leave: {
-    opacity: 0,
-    transform: 'rotate(-45deg)'
-  }
-};
+// const transition = {
+//   from: {
+//     opacity: 0,
+//     transform: 'rotate(45deg)'
+//   },
+//   enter: {
+//     opacity: 1,
+//     transform: 'rotate(0)'
+//   },
+//   leave: {
+//     opacity: 0,
+//     transform: 'rotate(-45deg)'
+//   }
+// };
 
 const template = () => (
   <FlexBox
+    align-items="center"
     justifyContent="space-between"
     position="absolute"
     bottom={0}
@@ -57,17 +60,19 @@ const template = () => (
 function App() {
   return (
     <Deck
-      transition={transition}
+      // transition={transition}
       // transitionDuration={500}
       theme={theme}
       template={template}
     >
+      <Accueil />
       <Presentation />
       <Avantages />
       <Branches />
       <Workflow />
       <VieBranche />
       <Bonus />
+      <Questions />
     </Deck>
   )
 }
