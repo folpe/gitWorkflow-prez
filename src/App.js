@@ -1,25 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Deck,  FlexBox,  FullScreen,  Progress } from 'spectacle'
+import './App.css'
+import Avantages from './components/Avantages';
+import Bonus from './components/Bonus';
+import Branches from './components/Branches';
+import Presentation from './components/Presentation'
+import VieBranche from './components/VieBranche';
+import Workflow from './components/Workflow';
+
+// import createTheme from "spectacle/lib/themes/default";
+
+// const theme = createTheme({
+//   primary: "#ff4081"
+// });
+
+const theme = {
+  colors: {
+    primary: '#ff4081',
+  },
+  fonts: {
+    header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
+    text: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
+  },
+}
+
+const transition = {
+  from: {
+    opacity: 0,
+    transform: 'rotate(45deg)'
+  },
+  enter: {
+    opacity: 1,
+    transform: 'rotate(0)'
+  },
+  leave: {
+    opacity: 0,
+    transform: 'rotate(-45deg)'
+  }
+};
+
+const template = () => (
+  <FlexBox
+    justifyContent="space-between"
+    position="absolute"
+    bottom={0}
+    width={1}
+  >
+    <Box padding="0 1em">
+      <FullScreen />
+    </Box>
+    <Box padding="1em">
+      <Progress />
+    </Box>
+  </FlexBox>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Deck
+      transition={transition}
+      // transitionDuration={500}
+      theme={theme}
+      template={template}
+    >
+      <Presentation />
+      <Avantages />
+      <Branches />
+      <Workflow />
+      <VieBranche />
+      <Bonus />
+    </Deck>
+  )
 }
 
-export default App;
+export default App
