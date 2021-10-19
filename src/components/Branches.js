@@ -35,7 +35,7 @@ const Branches = () => {
       <Notes>
         <div>Le découpage des branches</div>
         <div>Main => Propre et stable, prête pour deploiement</div>
-        <div>Develop => branche comportant tous les développement</div>
+        <div>Develop => Branche comportant tous les développements (pas de développement direct dessus)</div>
         <div>Feature => Développement d'une nouvelle fonctionnalité</div>
         <div>
           Release => Ensemble de feature pour deploiement d'une nouvelle version

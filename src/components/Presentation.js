@@ -38,7 +38,8 @@ const Presentation = () => {
     },
     webDevSince: 2010,
     lovedStack: ['React', 'Redux', 'Node.js', 'Webpack', 'GraphQL'],
-    methodologyKnowledge: ['Scrum', 'Kanban']
+    methodologyKnowledge: ['Scrum', 'Kanban'],
+    evangelistOf: ['Atomic Design'],
     company: 'Volpio',
     intervenedFor: [
       'OrangeBank',
@@ -53,8 +54,8 @@ const Presentation = () => {
         <div>Je m'appelle Florent</div>
         <div>Je suis dev front depuis un peu plus de 10 ans</div>
         <div>
-          J'interviens auprès de sociétés en tant que senior/lead ou pour
-          apporter des conseils sur la methodo de façon général
+          J'interviens auprès de sociétés en tant que dev senior/lead ou pour
+          apporter des conseils pour l'amélioration de la methodologie
         </div>
       </Notes>
     </Slide>
